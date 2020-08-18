@@ -36,7 +36,7 @@ public class HomeController extends Controller {
     public Result install() {
         String state = UUID.randomUUID().toString();
         String redirectUri = "http://localhost:8181/install/confirmed";
-        String scope = "BOOKINGS_READ,CUSTOMER_CONTACT_INFO";
+        String scope = "BOOKINGS_READ,CHECKOUTS_READ,CHECKOUTS_WRITE,CUSTOMERS_CONTACT_READ";
 
         return redirect("http://bokun.localhost:3000/appstore/oauth/authorize" +
                 "?state=" + state +
