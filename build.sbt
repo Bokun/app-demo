@@ -16,3 +16,4 @@ libraryDependencies += "com.h2database" % "h2" % "1.4.192"
 libraryDependencies += "commons-codec" % "commons-codec" % "1.14"
 
 PlayKeys.devSettings += "play.server.http.port" -> "8181"
+PlayKeys.fileWatchService := play.dev.filewatch.FileWatchService.jdk7(play.sbt.run.toLoggerProxy(sLog.value))
